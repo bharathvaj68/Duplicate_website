@@ -172,7 +172,7 @@ body {
 
 .star {
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 22%;
   z-index: 1;
 }
@@ -186,7 +186,7 @@ body {
 
 .decoration.diamond {
   position: absolute;
-  bottom: 25%;
+  top: 40%;
   right: 15%;
   z-index: 1;
 }
@@ -209,7 +209,55 @@ body {
 
 
 
+/* about */
 
+ .about-container {
+      max-width: 1000px;
+      padding: 8% 2%;
+    }
+
+    .about-title {
+      text-align: left;
+      font-family: 'Audiowide';
+      font-size: 40px;
+      font-weight: 200;
+      margin-bottom: 20px;
+
+    }
+
+    .about-box {
+      border: 1px solid #888;
+      padding: 25px;
+      border-radius: 20px;
+      background: transparent;
+      position: relative;
+
+
+      
+    }
+
+    .icon-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    .yellow { background: #FFD700; }
+    .cyan { background: #00E5FF; clip-path: polygon(0 0, 100% 50%, 0 100%); border-radius: 0; }
+    .pink { background: #FF0080; border-radius: 6px; }
+    .purple { background: #7A5CFF; border-radius: 50px; }
+
+    .about-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ddd;
+    }
 
 
 
