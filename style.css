@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -91,7 +91,6 @@ body {
   margin-bottom: 40px;
   color: #fff;
   letter-spacing: 2px;
-
 }
 
 .hero-content {
@@ -100,7 +99,7 @@ body {
 }
 
 .hero-subtitle {
-    font-family: 'poppins';
+  font-family: "poppins";
   font-size: 14px;
   line-height: 1.6;
   color: #ffffff;
@@ -114,7 +113,7 @@ body {
 
 .download-btn {
   position: relative;
-  font-family: 'Audiowide';
+  font-family: "Audiowide";
   background: #fff;
   color: #000;
   font-size: 14px;
@@ -146,11 +145,11 @@ body {
 }
 
 .particle.star {
-  background: url('./Source/stars.png') no-repeat center/contain;
+  background: url("./Source/stars.png") no-repeat center/contain;
 }
 
 .diamond {
-  background: url('./Source/diamond.png') no-repeat center/contain;
+  background: url("./Source/diamond.png") no-repeat center/contain;
 }
 
 .download-wrapper:hover .particle {
@@ -168,25 +167,23 @@ body {
   }
 }
 
-
-
 .star {
   position: absolute;
-  top: 25%;
+  top: 22%;
   left: 22%;
   z-index: 1;
 }
 
 .star img {
-  width: 80px;
-  height: 100px;
+  width: 90px;
+  height: 120px;
   filter: drop-shadow(0 0 10px rgba(0, 180, 255, 0.5));
   animation: twinkle 3s ease-in-out infinite;
 }
 
 .decoration.diamond {
   position: absolute;
-  bottom: 25%;
+  top: 62%;
   right: 15%;
   z-index: 1;
 }
@@ -207,9 +204,198 @@ body {
   height: auto;
 }
 
+/* about */
 
+.about-container {
+  min-height: 100vh;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  padding: 5% 2%;
+}
 
+.about-title {
+  position: relative;
+  top: 50px;
+  right: 25.5%;
+  font-family: "Audiowide";
+  font-size: 40px;
+  font-weight: 200;
+}
 
+.about-box {
+  padding: 40px 25px;
+  background: transparent;
+  text-align: justify;
+  text-justify: inter-word;
 
+  --r: 25px;
+  --s: 30px;
+  --x: 150px;
+  --y: 20px;
 
+  width: 950px;
+  height: 350px;
+  aspect-ratio: 1;
+  background: #44444442;
+  border-radius: var(--r);
+  --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000
+        72%);
+  --_g: conic-gradient(at var(--r) var(--r), #000 75%, #0000 0);
+  --_d: (var(--s) + var(--r));
+  mask: calc(var(--_d) + var(--x)) 0 var(--_m),
+    0 calc(var(--_d) + var(--y)) var(--_m),
+    radial-gradient(var(--s) at 0 0, #0000 99%, #000 calc(100% + 1px))
+      calc(var(--r) + var(--x)) calc(var(--r) + var(--y)),
+    var(--_g) calc(var(--_d) + var(--x)) 0,
+    var(--_g) 0 calc(var(--_d) + var(--y));
+  mask-repeat: no-repeat;
+}
 
+.icon-row {
+  display: flex;
+  position: relative;
+  bottom: 15px;
+  left: 25%;
+  gap: 2px;
+}
+
+.about-icon {
+  width: 140px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.about-text {
+  font-family: "poppins";
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+/* demo */
+
+.demo-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.demo-title {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  font-family: "Audiowide", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 15px 30px;
+  backdrop-filter: blur(10px);
+  background: rgba(20, 20, 20, 0.5);
+  z-index: 100;
+}
+
+.demo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  margin-top: 120px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 15px 0;
+}
+
+.laptop-section {
+  flex-direction: row;
+}
+
+.laptop-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.laptop-container .device-frame {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.laptop-screen {
+  position: absolute;
+  top: 10.1%;
+  left: 15.1%;
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.phone-section {
+  flex-direction: row;
+}
+
+.phone-container {
+  position: relative;
+  left: 5%;
+  width: 100%;
+  max-width: 500px;
+}
+
+.phone-container .device-frame {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+.phone-screen {
+  position: absolute;
+  top: 8%;
+  left: 31%;
+  width: 38%;
+  height: 80.1%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.device-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.laptop-text{
+    max-width: 450px;
+}
+.phone-text {
+  max-width: 450px;
+  position: relative;
+  left: 5%;
+}
+
+.phone-container img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
