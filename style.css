@@ -476,7 +476,6 @@ body {
   line-height: 1.6;
 }
 
-/* Mobile adjustments */
 @media (max-width: 768px) {
   .feature-card:nth-child(odd),
   .feature-card:nth-child(even) {
