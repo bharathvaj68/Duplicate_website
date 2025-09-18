@@ -15,6 +15,7 @@
         <ul class="nav-links">
           <li><a href="#home">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
+          <li><a href="#demo">DEMO</a></li>
           <li><a href="#features">FEATURES</a></li>
           <li><a href="#contact">CONTACT US</a></li>
         </ul>
@@ -25,7 +26,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
       <h1 class="hero-title">DATA DOWNLOAD<br />DUPLICATION ALERT SYSTEM</h1>
 
       <div class="star">
@@ -58,7 +59,7 @@
 
     <!-- about -->
 
-    <div class="about-container">
+    <div id="about" class="about-container">
       <h2 class="about-title">About</h2>
       <div class="about-box">
         <div class="icon-row">
@@ -82,15 +83,21 @@
 
     <!-- demo -->
 
-    <div class="demo-section">
+    <div id="demo"  class="demo-section">
       <div class="demo-title">Demo</div>
 
       <div class="demo-content">
         <div class="section laptop-section">
           <div class="laptop-container">
-            <div class="device-screen laptop-screen">
-              <video src="./Source/demo video.mp4" autoplay></video>
-            </div>
+      <div class="device-screen laptop-screen">
+  <video src="./Source/demo video.mp4" autoplay loop muted></video>
+  <div class="video-controls">
+    <button class="play-pause">⏸</button>
+    <button class="mute-unmute">🔇</button>
+  </div>
+</div>
+
+
             <img
               src="./Source/demo laptop.png"
               alt="Laptop Frame"
@@ -125,8 +132,12 @@
 
           <div class="phone-container">
             <div class="device-screen phone-screen">
-              <video src="./Source/demo video.mp4" autoplay
+              <video src="./Source/demo video.mp4" autoplay loop muted
               ></video>
+               <div class="video-controls">
+    <button class="play-pause">⏸</button>
+    <button class="mute-unmute">🔇</button>
+  </div>
             </div>
             <img
               src="./Source/demo phone.png"
@@ -141,7 +152,7 @@
 
     <!-- features -->
     
-<div class="features-section">
+<div id="features" class="features-section" >
   <div class="features-header">
     <h2>Features</h2>
     <img src="./Source/shapes 2.png" alt="Decorative Shapes">
@@ -184,7 +195,7 @@
 
   <!-- footer -->
 
-   <div class="container">
+   <div id="contact" class="container">
         <div class="hero-section">
             <h1>Our Team</h1>
             <img src="./Source/team.png" alt="Team collaboration illustration" class="team-illustration">
@@ -215,6 +226,10 @@
             <p>© 2025 Nikocomet. All Rights Reserved.</p>
         </div>
     </div>
+
+
+
+    
 
     <script src="main.js"></script>
   </body>
