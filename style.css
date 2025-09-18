@@ -403,126 +403,239 @@ body {
 
 /* features */
 
- .features-section {
-      max-width: 1000px;
-      margin: auto;
+  .features-section {
       position: relative;
+      width: 800px;
+      height: 800px;
+      margin: auto;
+      
     }
 
-    .features-title {
-      font-family: "Audiowide", sans-serif;
-      font-size: 42px;
-      font-weight: 400;
-      margin-bottom: 10%;
-      color: #fff;
+    .features-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 180px;
+      height: 180px;
+      border: 3px solid #fff;
+      border-radius: 50%;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      text-align: center;
+      font-family: "Audiowide", sans-serif;
+      font-size: 26px;
+      color: #fff;
+      background: transparent;
+      z-index: 2;
     }
 
-    .features-icon {
-      width: 70px;
-      height: auto;
-      position: relative;
-      top: 4px;
+    .features-center img {
+      width: 60px;
+      margin-top: 10px;
     }
 
-    .features-list {
-      position: relative;
-    }
-
-    .features-list::before {
-      content: "";
+    .orbit {
       position: absolute;
-      top: 0;
-      bottom: 0;
+      top: 50%;
       left: 50%;
-      width: 2px;
-      background: rgba(255,255,255,0.2);
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
     }
 
     .feature-card {
-      width: 45%;
-      padding: 25px;
-      margin-bottom: 60px;
+      position: absolute;
+      width: 220px;
+      padding: 20px;
       border: 2px solid #fff;
       border-radius: 20px;
       background: transparent;
-      position: relative;
+      text-align: center;
       opacity: 0;
-      transform: translateY(50px) scale(0.95);
-      transition: all 0.6s ease-out;
-      will-change: transform, opacity;
-      perspective: 1000px;
-    }
-
-    .feature-card:nth-child(odd) {
-      margin-right: auto;
-      text-align: right;
-      transform: translateX(-100px) translateY(50px);
-    }
-    .feature-card:nth-child(even) {
-      margin-left: auto;
-      text-align: left;
-      transform: translateX(100px) translateY(50px);
+      transform: scale(0.8);
+      transition: all 0.6s ease;
+      font-family: "Poppins", sans-serif;
     }
 
     .feature-card.visible {
       opacity: 1;
-      transform: translateX(0) translateY(0) scale(1);
-    }
-
-    .feature-card:hover {
-      transform: scale(1.05) rotateX(6deg) rotateY(-6deg);
-      box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
-    }
-
-    .feature-card::after {
-      content: "";
-      position: absolute;
-      top: 20px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: #666666ca;
-    }
-    .feature-card:nth-child(odd)::after {
-      right: -32px;
-    }
-    .feature-card:nth-child(even)::after {
-      left: -32px;
+      transform: scale(1);
     }
 
     .feature-card h3 {
       font-family: "Audiowide", sans-serif;
-      font-size: 20px;
-      margin-bottom: 12px;
+      font-size: 18px;
+      margin-bottom: 10px;
       color: #fff;
     }
 
     .feature-card p {
-      font-size: 15px;
+      font-size: 14px;
       line-height: 1.6;
       color: #ccc;
       margin: 0;
     }
 
-    @media (max-width: 768px) {
-      .features-list::before {
-        left: 8px;
-      }
-      .feature-card,
-      .feature-card:nth-child(odd),
-      .feature-card:nth-child(even) {
+    .feature-card:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+    }
+
+
+    @media (max-width: 900px) {
+      .features-section {
         width: 100%;
-        text-align: left;
-        margin: 0 0 40px;
-        transform: translateY(50px);
+        height: auto;
       }
-      .feature-card::after {
-        left: -28px;
-        right: auto;
+      .orbit {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        transform: none;
+      }
+      .feature-card {
+        position: relative;
+        margin: 0 auto 30px;
+      }
+      .connector {
+        display: none;
       }
     }
+
+
+    /* footer */
+
+     .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10% 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .team-illustration {
+            width: 100%;
+            max-width: 615px;
+            height: 595;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .text-content {
+          
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+        }
+
+        .illustration-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .side-illustration {
+            width: 200px;
+            height: 200px;
+        }
+
+        .person-illustration {
+            width: 273px;
+            height: 354px;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .astronaut-illustration {
+            width: 220px;
+            height: 220px;
+        }
+
+        .bottom-text {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin-left: 40px;
+        }
+
+
+
+        .team{
+          display: flex;
+          justify-content: center;
+          font-size: 8rem;
+          font-family: "arial black";
+          font-style: italic;
+          font-weight: bolder;
+          color: #252525;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            .content-section,
+            .bottom-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            .side-illustration,
+            .astronaut-illustration {
+                width: 150px;
+                height: 150px;
+            }
+
+            .person-illustration {
+                width: 100px;
+                height: 120px;
+            }
+        }
