@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -16,9 +17,13 @@ body {
   background-color: #000;
   color: #fff;
   font-family: "Poppins", sans-serif;
+  body {
+  overflow-x: hidden;
+}
 }
 
 /* ------------------Header --------------------*/
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -246,7 +251,7 @@ body {
   width: 950px;
   height: 350px;
   aspect-ratio: 1;
-  background: #44444442;
+  background: #1f1e1e;
   border-radius: var(--r);
   --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000
         72%);
@@ -624,6 +629,16 @@ body {
           color: #252525;
         }
 
+        .text-content a{
+          color: rgb(137, 137, 137);
+          text-decoration: none;
+        }
+
+        .text-content a:hover{
+          color: white;
+          transition:0.3s;
+                }
+
         .footer {
             text-align: center;
             font-size: 0.8rem;
@@ -717,3 +732,13 @@ body {
     font-size: 3rem;
   }
 }
+
+
+
+/* responsive design  */
+
+
+
+
+/* animations */
+
