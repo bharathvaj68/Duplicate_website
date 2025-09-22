@@ -1,5 +1,3 @@
-
-
 document.querySelectorAll(".device-screen").forEach(screen => {
   const video = screen.querySelector("video");
   const playPauseBtn = screen.querySelector(".play-pause");
@@ -21,3 +19,7 @@ document.querySelectorAll(".device-screen").forEach(screen => {
     muteUnmuteBtn.textContent = video.muted ? "🔇" : "🔊";
   });
 });
+
+
+
+
