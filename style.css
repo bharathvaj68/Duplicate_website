@@ -144,6 +144,43 @@ body {
   box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
 }
 
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 1;
+}
+
+.dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+.dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  transition: background 0.3s ease;
+}
+.download-wrapper:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .particle {
   position: absolute;
   width: 18px;
