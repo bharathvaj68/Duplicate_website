@@ -1,62 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Duplicate Finder Pro</title>
-    <link rel="icon" type="image/png" href="./Source/duplicate icon.jpg">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-     <!-- Header -->
+    <link rel="icon" type="image/png" href="./Source/duplicate icon.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="logo">DDDA System</div>
-            <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#features">FEATURES</a></li>
-                <li><a href="#contact">CONTACT US</a></li>
-            </ul>
-            <div class="team-icon">
-                <img src="./Source/Vector.png" alt="Team Icon">
-            </div>
-        </nav>
+      <nav class="nav">
+        <div class="logo">DDDA System</div>
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#demo">DEMO</a></li>
+          <li><a href="#features">FEATURES</a></li>
+          <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+        <div class="team-icon">
+          <img src="./Source/Vector.png" alt="Team Icon" />
+        </div>
+      </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <h1 class="hero-title">DATA DOWNLOAD<br />DUPLICATION ALERT SYSTEM</h1>
 
-<!-- Hero Section -->
-    <section class="hero">
+      <div class="star">
+        <img src="./Source/stars.png" alt="Stars" />
+      </div>
 
+      <div class="mockup">
+        <img src="./Source/mockup.png" alt="Mockup" />
+      </div>
 
-        <h1 class="hero-title">DATA DOWNLOAD<br>DUPLICATION ALERT SYSTEM</h1>
+      <div class="decoration diamond">
+        <img src="./Source/diamond.png" alt="Diamond" />
+      </div>
 
-        <div class="star">
-            <img src="./Source/stars.png" alt="Stars">
+      <div class="hero-content">
+        <p class="hero-subtitle">
+          A smart system that detects and prevents duplicate data downloads,
+          ensuring clean, optimized, and reliable storage
+        </p>
+        <div class="download-wrapper">
+          <button class="download-btn">Download</button>
+
+          <span class="particle star" style="--x: -60px; --y: -40px"></span>
+          <span class="particle diamond" style="--x: 70px; --y: -50px"></span>
+          <span class="particle star" style="--x: 50px; --y: 60px"></span>
+          <span class="particle diamond" style="--x: -70px; --y: 50px"></span>
         </div>
+      </div>
+    </section>
 
-        <div class="mockup">
-            <img src="./Source/mockup.png" alt="Mockup">
+    <!-- about -->
+
+    <div id="about" class="about-container">
+      <h2 class="about-title">About</h2>
+      <div class="about-box">
+        <div class="icon-row">
+          <img src="./Source/shapes.png" alt="Shapes Icon" class="about-icon" />
+        </div>
+        <p class="about-text">
+          The Data Download Duplication Alert System (DDDA System) is designed
+          to address one of the most common issues in data management —
+          duplicate downloads. When users repeatedly download the same files, it
+          leads to storage inefficiency, redundancy, and confusion in managing
+          datasets.
+        </p>
+        <p class="about-text">
+          Our solution provides a smart detection and alert mechanism that
+          automatically checks every download request, compares it with existing
+          data, and notifies users in real time if a duplicate is detected. This
+          ensures clean, optimized, and reliable storage management.
+        </p>
+      </div>
+    </div>
+
+    <!-- demo -->
+
+    <div id="demo" class="demo-section">
+      <div class="demo-title">Demo</div>
+
+      <div class="demo-content">
+        <div class="section laptop-section">
+          <div class="laptop-container">
+            <div class="device-screen laptop-screen">
+              <video src="./Source/demo video.mp4" autoplay loop muted></video>
+              <div class="video-controls">
+                <button class="play-pause">⏸</button>
+                <button class="mute-unmute">🔇</button>
+              </div>
             </div>
-            
-        <div class="decoration diamond">
-            <img src="./Source/diamond.png" alt="Diamond">
+
+            <img
+              src="./Source/demo laptop.png"
+              alt="Laptop Frame"
+              class="device-frame"
+            />
+          </div>
+
+          <div class="laptop-text">
+            <p>
+              Experience the full dashboard view of the Data Download
+              Duplication Alert System.
+            </p>
+            <p>
+              Easily monitor downloads, track duplicate checks, and receive
+              real-time alerts in a clean, user-friendly interface. Perfect for
+              enterprise and professional use.
+            </p>
+          </div>
         </div>
 
-        <div class="hero-content">
-            <p class="hero-subtitle">A smart system that detects and prevents duplicate data downloads, ensuring clean, optimized, and reliable storage</p>
-<div class="download-wrapper">
-  <button class="download-btn">Download</button>
+        <div class="section phone-section">
+          <div class="phone-text">
+            <p>
+              Access the system on-the-go with the mobile-friendly interface.
+            </p>
+            <p>
+              Get instant notifications, check duplicate alerts, and manage your
+              downloads directly from your smartphone. Designed with a
+              responsive layout for seamless use anywhere.
+            </p>
+          </div>
 
-  <span class="particle star" style="--x:-60px; --y:-40px;"></span>
-  <span class="particle diamond" style="--x:70px; --y:-50px;"></span>
-  <span class="particle star" style="--x:50px; --y:60px;"></span>
-  <span class="particle diamond" style="--x:-70px; --y:50px;"></span>
-</div>
+          <div class="phone-container">
+            <div class="device-screen phone-screen">
+              <video src="./Source/demo video.mp4" autoplay loop muted></video>
+              <div class="video-controls">
+                <button class="play-pause">⏸</button>
+                <button class="mute-unmute">🔇</button>
+              </div>
+            </div>
+            <img
+              src="./Source/demo phone.png"
+              alt="Phone Frame"
+              class="device-frame"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- features -->
+
+    <div id="features" class="features-section">
+      <div class="features-header">
+        <h2>Features</h2>
+        <img src="./Source/shapes 2.png" alt="Decorative Shapes" />
+      </div>
+
+      <div class="features-diagonal">
+        <div class="feature-card">
+          <h3>Recycle Bin Management</h3>
+          <p>
+            All duplicate files detected are moved to a dedicated recycle bin,
+            allowing users to review and restore files if needed before
+            permanent deletion.
+          </p>
         </div>
 
-    
+        <div class="feature-card">
+          <h3>Fast Duplicate Detection</h3>
+          <p>
+            Quickly identifies duplicate files such as videos, images, audio,
+            and documents, ensuring optimized storage and better file
+            organization.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Hash-Based File Comparison</h3>
+          <p>
+            Uses secure hash key values (MD5/SHA-256) to accurately detect
+            duplicates, even if filenames are different.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Real-Time Alerts</h3>
+          <p>
+            Notifies users instantly when a duplicate file is found, preventing
+            unnecessary downloads and storage waste.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Storage Optimization</h3>
+          <p>
+            Reduces redundancy and frees up valuable storage space by
+            eliminating duplicates efficiently.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>User-Friendly Dashboard</h3>
+          <p>
+            Simple and intuitive interface to manage, review, and take action on
+            duplicate files.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div id="contact" class="container">
+      <div class="hero-section">
+        <h1>Our Team</h1>
+        <img
+          src="./Source/team.png"
+          alt="Team collaboration illustration"
+          class="team-illustration"
+        />
+      </div>
+
+      <div class="content-section">
+        <div class="text-content">
+          <p>
+            The Data Download Duplication Alert System (DDDA System) was
+            developed by our team —
+            <a href="https://www.arjunaadhith.com/">Arjun Aadhith BS</a>,
+            <a href="">Bharathvaj V</a>, <a href="https://www.linkedin.com/in/bushra-mushthaq">Bushra M</a>,
+            <a href="">Dhanush Sri S</a>, and <a href="">Harshitha P</a> — under
+            the guidance of our mentor, <a href="">Dr. V. S. Thiyagarajan</a>.
+          </p>
+        </div>
+
+        <div class="illustration-container">
+          <img
+            src="./Source/mentor.png"
+            alt="Person with laptop illustration"
+            class="person-illustration"
+          />
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <div class="illustration-container">
+          <img
+            src="./Source/lunch.png"
+            alt="Astronaut with laptop illustration"
+            class="astronaut-illustration"
+          />
+        </div>
+        <div class="bottom-text">
+          <p>
+            We are proud to have successfully completed and launched this
+            project, making it accessible for download to help users optimize
+            their systems and enhance data security.
+          </p>
+        </div>
+      </div>
+
+      <div class="team">
+        <h2>NIKOCOMET</h2>
+      </div>
+
+      <div class="footer">
+        <p>© 2025 Nikocomet. All Rights Reserved.</p>
+      </div>
+    </div>
+
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
