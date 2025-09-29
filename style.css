@@ -654,6 +654,9 @@ body {
   font-size: 0.95rem;
   line-height: 1.8;
   color: #e0e0e0;
+  text-align: justify;
+  position: relative;
+  left: 150px;
 }
 
 .text-content p {
@@ -687,6 +690,8 @@ body {
 .astronaut-illustration {
   width: 220px;
   height: 220px;
+  position: relative;
+  left: 120px;
 }
 
 .bottom-text {
@@ -694,7 +699,7 @@ body {
   line-height: 1.8;
   color: #e0e0e0;
   max-width: 600px;
-  margin-left: 40px;
+  margin-left: 150px;
 }
 
 .team {
@@ -915,10 +920,20 @@ body {
     transform: none;
   }
 
-  .content-section,
+ .content-section,
   .bottom-section {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .text-content {
+    left: 0;
+    text-align: center;
+  }
+
+  .astronaut-illustration {
+    left: 0;
+    margin: 0 auto;
   }
 
   .bottom-text {
@@ -1244,7 +1259,7 @@ body {
     max-width: 100%;
   }
 
-  .person-illustration {
+    .person-illustration {
     width: 180px;
     height: 230px;
   }
@@ -1252,10 +1267,6 @@ body {
   .astronaut-illustration {
     width: 150px;
     height: 150px;
-  }
-
-  .bottom-section {
-    grid-template-columns: 1fr;
   }
 
   .text-content,
