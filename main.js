@@ -21,5 +21,32 @@ document.querySelectorAll(".device-screen").forEach(screen => {
 });
 
 
+// video overlay for laptop
 
+const laptopContainer = document.querySelector('.laptop-container');
+const videoOverlay = document.getElementById('videoOverlay');
+const overlayVideo = document.getElementById('overlayVideo');
+const overlayContent = document.getElementById('overlayContent');
+const closeOverlay = document.getElementById('closeOverlay');
 
+laptopContainer.addEventListener('click', (e) => {
+  videoOverlay.classList.add('active');
+  overlayVideo.currentTime = 0;
+  overlayVideo.play();
+});
+
+videoOverlay.addEventListener('click', (e) => {
+  if (e.target === videoOverlay) {
+    videoOverlay.classList.remove('active');
+    overlayVideo.pause();
+  }
+});
+
+closeOverlay.addEventListener('click', () => {
+  videoOverlay.classList.remove('active');
+  overlayVideo.pause();
+});
+
+overlayContent.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
