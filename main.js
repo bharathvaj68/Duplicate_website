@@ -50,3 +50,4 @@ closeOverlay.addEventListener('click', () => {
 overlayContent.addEventListener('click', (e) => {
   e.stopPropagation();
 });
+

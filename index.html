@@ -9,23 +9,43 @@
     
   </head>
   <body>
+
     <!-- Header -->
-    <header class="header">
-      <nav class="nav">
-        <div class="logo">Duplicate Finder Pro</div>
-        <ul class="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#demo">DEMO</a></li>
-          <li><a href="#features">FEATURES</a></li>
-          <li><a href="#contact">CONTACT US</a></li>
-        </ul>
-        <div class="team-icon">
-            <a href="#contact">
-          <img src="./Source/Vector.png" alt="Team Icon" /></a>
-        </div>
-      </nav>
-    </header>
+   <header class="header" id="header">
+  <nav class="nav">
+    <div class="logo">Duplicate Finder Pro</div>
+    
+    <!-- Burger Icon -->
+    <div class="burger-menu" id="burgerMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">HOME</a></li>
+      <li><a href="#about" class="nav-link">ABOUT</a></li>
+      <li><a href="#demo" class="nav-link">DEMO</a></li>
+      <li><a href="#features" class="nav-link">FEATURES</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT US</a></li>
+      
+      <!-- Close button inside mobile menu -->
+      <div class="mobile-close" id="mobileClose">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+    </ul>
+
+    <div class="team-icon">
+      <a href="#contact">
+        <img src="./Source/Vector.png" alt="Team Icon" />
+      </a>
+    </div>
+  </nav>
+</header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -279,5 +299,110 @@
     </div>
 
     <script src="main.js"></script>
+
+
+<!-- buger menu     -->
+
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+  const burgerMenu = document.getElementById('burgerMenu');
+  const navLinks = document.getElementById('navLinks');
+  const navLinkItems = document.querySelectorAll('.nav-link');
+  const mobileClose = document.getElementById('mobileClose');
+  const header = document.getElementById('header');
+  const heroSection = document.querySelector('.hero');
+  
+  let lastScrollTop = 0;
+  let heroHeight = heroSection ? heroSection.offsetHeight : 800;
+
+  // Toggle menu
+  function toggleMenu() {
+    burgerMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+  }
+
+  // Close menu
+  function closeMenu() {
+    burgerMenu.classList.remove('active');
+    navLinks.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Burger menu click
+  if (burgerMenu) {
+    burgerMenu.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+  }
+
+  // Mobile close button
+  if (mobileClose) {
+    mobileClose.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMenu();
+    });
+  }
+
+  // Nav link clicks
+  navLinkItems.forEach(function(link) {
+    link.addEventListener('click', function() {
+      closeMenu();
+    });
+  });
+
+  // Click outside to close
+  document.addEventListener('click', function(e) {
+    const isClickInsideNav = navLinks.contains(e.target);
+    const isClickOnBurger = burgerMenu.contains(e.target);
+    
+    if (!isClickInsideNav && !isClickOnBurger && navLinks.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+
+  // Resize handler
+  window.addEventListener('resize', function() {
+    heroHeight = heroSection ? heroSection.offsetHeight : 800;
+    if (window.innerWidth > 991) {
+      closeMenu();
+    }
+  });
+
+  // Scroll handler - hide after hero section
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Only hide/show after passing hero section
+        if (scrollTop > heroHeight) {
+          if (scrollTop > lastScrollTop) {
+            // Scrolling down - hide
+            header.classList.add('hidden');
+          } else {
+            // Scrolling up - show
+            header.classList.remove('hidden');
+          }
+        } else {
+          // Always show in hero section
+          header.classList.remove('hidden');
+        }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+
+    </script>
   </body>
 </html>
